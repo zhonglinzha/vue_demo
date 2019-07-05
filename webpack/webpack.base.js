@@ -17,6 +17,7 @@ module.exports = {
       '@base': path.resolve('./src/base'),
       '@dll': path.resolve('./src/dll'),
       '@page': path.resolve('./src/page'),
+      '@img': path.resolve('./src/img'),
     },
   },
   module: {
@@ -35,12 +36,26 @@ module.exports = {
         use: [{ loader: 'vue-style-loader' }, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpe?g|gif|svg)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]',
         },
       },
+      // {
+      //   test: /\.svg$/,
+      //   use: [
+      //     {loader: 'svg-sprite-loader', options: {}},
+      //     {loader: 'svgo-loader', options: {
+      //        plugins: [
+      //           // 还有很多配置，具体可以查看https://github.com/svg/svgo
+      //          { removeViewBox: false },
+      //          { removeXMLNS: true }
+      //         ]
+      //       }
+      //      }
+      //   ]
+      // }
     ],
   },
   plugins: [
