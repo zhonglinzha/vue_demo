@@ -1,17 +1,14 @@
 <template>
-    <div>{{str}}</div>
+  <div id="app">
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
+  </div>
 </template>
 <script>
 export default {
-  name: 'App',
-  data () {
-    return {
-      str: 'h3232311'
-    }
-  }}
+  name: "App",
+};
 </script>
 <style lang="sass">
-div {
-  color: red;
-}
 </style>

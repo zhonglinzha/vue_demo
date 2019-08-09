@@ -3,7 +3,7 @@ const baseConfig = require('./webpack.base');
 const path = require('path');
 const webpack = require('webpack');
 module.exports = merge(baseConfig, {
-    devtool: 'inline-source-map', // 压缩方式
+    // devtool: 'inline-source-map', // 压缩方式
     mode: 'development',
     devServer: {
     clientLogLevel: "warning",

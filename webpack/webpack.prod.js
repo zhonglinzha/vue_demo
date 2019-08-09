@@ -4,7 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const AutoDllPlugin = require('autodll-webpack-plugin');
 module.exports = merge(baseConfig, {
-    devtool: 'source-map', // 压缩方式
+    // devtool: 'source-map', // 压缩方式
     mode: 'production',
     plugins: [
         new AutoDllPlugin({
@@ -13,6 +13,7 @@ module.exports = merge(baseConfig, {
             entry: {
               vendor: [
                 'vue',
+                'babel-polyfill'
               ]
             }
           })
